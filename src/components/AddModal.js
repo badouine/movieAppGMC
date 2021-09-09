@@ -14,7 +14,7 @@ class AddModal extends Component {
   render() {
     return (
       <div>
-        <Button variant="outline-primary" onClick={this.handleShow}>
+        <Button variant="primary" onClick={this.handleShow}>
           +
         </Button>
         <Modal show={this.state.show} onHide={this.handleShow}>
@@ -25,19 +25,19 @@ class AddModal extends Component {
             <div>
               <div>
                 <label className="input">Title:</label>
-                <input type="text" name="name" />
+                <input type="text" name="name"/>
               </div>
               <div>
                 <label className="input">Image:</label>
-                <input type="text" name="image" />
+                <input type="text" name="image"/>
               </div>
               <div>
                 <label className="input">Rating:</label>
-                <input type="text" name="rating" />
+                <input type="text" name="rating"/>
               </div>
               <div>
                 <label className="input">Year:</label>
-                <input type="text" name="year" />
+                <input type="text" name="year"/>
               </div>
             </div>
           </Modal.Body>
