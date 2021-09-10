@@ -12,7 +12,7 @@ const ListMovies = (props) => {
           <Card.Body>
             <Card.Title>{el.name}</Card.Title>
             <Card.Text>{el.year}</Card.Text>
-            <StarRatingComponent/>
+            <StarRatingComponent value={el.rating} starCount={5}/>
         </Card.Body>
         </Card>
         </div>

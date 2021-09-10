@@ -25,9 +25,10 @@
 }
 .input {
       min-width: 80px;
+      margin: 6px 0;
   }
 input{
-      min-width: 300px;
+      min-width: 300px; 
 }
 .movie{
     color: black;

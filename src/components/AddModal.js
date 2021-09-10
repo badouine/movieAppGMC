@@ -11,6 +11,11 @@ class AddModal extends Component {
   handleShow = () => {
     this.setState({ show: !this.state.show });
   };
+  handleChange = (event) => {
+    this.setState({
+      [event.target.name]: event.target.value,
+    });
+  }
   render() {
     return (
       <div>
@@ -25,19 +30,19 @@ class AddModal extends Component {
             <div>
               <div>
                 <label className="input">Title:</label>
-                <input type="text" name="name"/>
+                <input type="text" name="name" onChange={this.handleChange}/>
               </div>
               <div>
                 <label className="input">Image:</label>
-                <input type="text" name="image"/>
+                <input type="text" name="image" onChange={this.handleChange}/>
               </div>
               <div>
                 <label className="input">Rating:</label>
-                <input type="text" name="rating"/>
+                <input type="text" name="rating" onChange={this.handleChange}/>
               </div>
               <div>
                 <label className="input">Year:</label>
-                <input type="text" name="year"/>
+                <input type="text" name="year" onChange={this.handleChange}/>
               </div>
             </div>
           </Modal.Body>

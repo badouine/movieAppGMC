@@ -26,11 +26,16 @@ class App extends React.Component {
         id: uuidv4(),
         name : "Transformer",
         image : "spectre.jpg",
-        rating : 5,
+        rating : 3,
         year : "2017"
       }
 
-    ]
+    ],
+  };
+  add = (newMovie) => {
+    this.setState({
+      movies: this.state.movies.concat(newMovie),
+    });
   }
   render() {
     return (
@@ -38,7 +43,7 @@ class App extends React.Component {
         <header className="App-header">
           <h1>Movie App</h1>
           <ListMovies movies={this.state.movies}/>
-          <AddModal />
+          <AddModal addMovie={(M) => this.add(M)}/>
         </header>
     </div>
     );
