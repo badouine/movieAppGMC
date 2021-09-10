@@ -4,6 +4,7 @@ import ListMovies from "./components/ListMovies";
 import "./App.css";
 import { Card } from "react-bootstrap";
 import { v4 as uuidv4 } from 'uuid';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends React.Component {
   state = {
