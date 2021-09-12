@@ -4,7 +4,7 @@ import ListMovies from "./components/ListMovies";
 import "./App.css";
 import { v4 as uuidv4 } from 'uuid';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import Rating from './components/Rating';
 class App extends React.Component {
   state = {
     movies : [
@@ -31,18 +31,32 @@ class App extends React.Component {
       }
 
     ],
+    searchTerm : "",
   };
   add = (newMovie) => {
     this.setState({
       movies: this.state.movies.concat(newMovie),
     });
-  }
+  };
+  getSearch = (ValueSearch) => {
+    this.setState({
+      searchTerm: ValueSearch,
+    });
+  };
+  getRating = (ValueRating) => {
+    this.setState({
+      rating: ValueRating,
+    });
+  };
   render() {
     return (
       <div className="App">
         <header className="App-header">
           <h1>Movie App</h1>
-          <ListMovies movies={this.state.movies}/>
+          <Rating rating={(R) => this.getRating(R)}/>
+          <ListMovies 
+          movies={this.state.movies}
+          />
           <AddModal addMovie={(M) => this.add(M)}/>
         </header>
     </div>
