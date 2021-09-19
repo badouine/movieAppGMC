@@ -1,6 +1,7 @@
 import React from "react";
 import StarRatingComponent from "react-rating-stars-component";
-import {Card} from "react-bootstrap";
+import {Card,Button} from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const ListMovies = (props) => {
   return (
@@ -12,10 +13,14 @@ const ListMovies = (props) => {
           <Card.Body>
             <Card.Title>{el.name}</Card.Title>
             <Card.Text>{el.year}</Card.Text>
-            <StarRatingComponent value={el.rating} starCount={5}/>
+              <Link to="/components/Description">
+              <Button variant="outline-primary">{el.description}</Button>
+              </Link>
+                <StarRatingComponent value={el.rating} starCount={5}/>
         </Card.Body>
         </Card>
         </div>
+
       ))}
     </div>
   );
