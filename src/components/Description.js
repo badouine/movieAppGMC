@@ -1,6 +1,10 @@
 import React from "react";
+import {Button} from "react-bootstrap";
+import { useHistory } from "react-router-dom";
 
 const Description = () => {
+
+    let history = useHistory();
   return (
     <div>
       <h1>Inception</h1>
@@ -21,7 +25,8 @@ const Description = () => {
         up in a war between the heroic Autobots and the villainous Decepticons,
         two factions of alien robots who can disguise themselves by transforming
         into everyday machinery, primarily vehicles.
-      </p>
+      </p> 
+      <Button onClick={() => history.push('/')} variant="outline-primary">Go Back</Button>
     </div>
   );
 };
